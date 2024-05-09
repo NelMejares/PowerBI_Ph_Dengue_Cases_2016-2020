@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Philippines Dengue Cases Dashboard 2016 - 2020.SemanticModel"
+    },
+    "byConnection": null
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Philippines Dengue Cases Dashboard 2016 - 2020"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9a28f20f-c7d7-4700-932c-33fd9c16c018"
+  }
+}

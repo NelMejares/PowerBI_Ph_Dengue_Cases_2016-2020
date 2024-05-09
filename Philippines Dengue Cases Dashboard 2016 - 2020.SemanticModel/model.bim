@@ -1,0 +1,563 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"ph_dengue_cases2016-2020\",\"ph_latitude_longitude\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.128.952.0 (24.04)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_ece67e4d-2aa5-4d72-a93e-6bfac0cbf1af",
+        "fromColumn": "Region",
+        "fromTable": "ph_dengue_cases2016-2020",
+        "toColumn": "Region",
+        "toTable": "ph_latitude_longitude"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "ph_dengue_cases2016-2020",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1ec5828a-d3c3-4b8d-9e05-d4094e36f329",
+            "sourceColumn": "Year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "Place",
+            "dataType": "string",
+            "lineageTag": "ad7f6b94-7d46-4684-8ab1-56c739cda3b5",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Dengue_Cases",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ccd13769-88d9-46ec-8446-317a5bd5242b",
+            "sourceColumn": "Dengue_Cases",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Dengue_Deaths",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a9b24771-2f50-40cf-8b3a-f4d82ab914da",
+            "sourceColumn": "Dengue_Deaths",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f36c6d04-7ba3-4bb4-adcc-ad1df11f6aaf",
+            "sortByColumn": "No month",
+            "sourceColumn": "Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Short Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "98430ab4-8216-48d7-9b48-d931be36c2bc",
+            "sortByColumn": "No month",
+            "sourceColumn": "Short Month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "No month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "137855b4-c322-49ff-9e92-ca6b715e5dad",
+            "sourceColumn": "No month",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e0d23427-f1bc-4c8d-b902-da586a207ef4",
+        "measures": [
+          {
+            "name": "Average Cases per Month",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "AVERAGEX(",
+              "    VALUES('ph_dengue_cases2016-2020'[Month]),",
+              "        [Sum Case]",
+              ")"
+            ],
+            "lineageTag": "9759f774-fc59-4a3c-932c-ad8180aaae2a"
+          },
+          {
+            "name": "Sum Case",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "SUM('ph_dengue_cases2016-2020'[Dengue_Cases])",
+            "lineageTag": "d6f1dd53-6537-46ca-b4bb-1625ba8bb39f"
+          },
+          {
+            "name": "Sum Death",
+            "expression": "SUM('ph_dengue_cases2016-2020'[Dengue_Deaths])",
+            "formatString": "0",
+            "lineageTag": "8af7004c-4ec1-4548-b6c3-089a5593d1cb"
+          },
+          {
+            "name": "Average Death per Month",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "AVERAGEX(",
+              "    VALUES('ph_dengue_cases2016-2020'[Month]),",
+              "        [Sum Death]",
+              ")"
+            ],
+            "lineageTag": "6d372c51-f6bb-478e-9fad-37e15d876cf8"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ph_dengue_cases2016-2020",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"D:\\1Portfolio\\PH_Dengue_Cases_2016-2020\\ph_dengue_cases2016-2020.csv\"),[Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Month\", type text}, {\"Year\", Int64.Type}, {\"Region\", type text}, {\"Dengue_Cases\", Int64.Type}, {\"Dengue_Deaths\", Int64.Type}}),",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Changed Type\", \"Month\", \"Month - Copy\"),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Duplicated Column\",{\"Month - Copy\", \"Month\", \"Year\", \"Region\", \"Dengue_Cases\", \"Dengue_Deaths\"}),",
+                "    #\"Split Column by Position\" = Table.SplitColumn(#\"Reordered Columns\", \"Month\", Splitter.SplitTextByRepeatedLengths(3), {\"Month.1\", \"Month.2\", \"Month.3\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Split Column by Position\",{{\"Month.1\", type text}, {\"Month.2\", type text}, {\"Month.3\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type1\",{\"Month.2\", \"Month.3\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Month.1\", \"Short Month\"}, {\"Month - Copy\", \"Month\"}}),",
+                "    #\"Duplicated Column1\" = Table.DuplicateColumn(#\"Renamed Columns\", \"Short Month\", \"Short Month - Copy\"),",
+                "    #\"Reordered Columns1\" = Table.ReorderColumns(#\"Duplicated Column1\",{\"Short Month - Copy\", \"Month\", \"Short Month\", \"Year\", \"Region\", \"Dengue_Cases\", \"Dengue_Deaths\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns1\",{{\"Short Month - Copy\", \"No month\"}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Renamed Columns1\", each true),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Filtered Rows\",\"Jan\",\"1\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"Feb\",\"2\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"Mar\",\"3\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"Apr\",\"4\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"May\",\"5\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value5\" = Table.ReplaceValue(#\"Replaced Value4\",\"Jun\",\"6\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value6\" = Table.ReplaceValue(#\"Replaced Value5\",\"Jul\",\"7\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value7\" = Table.ReplaceValue(#\"Replaced Value6\",\"Aug\",\"8\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value8\" = Table.ReplaceValue(#\"Replaced Value7\",\"Sep\",\"9\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value9\" = Table.ReplaceValue(#\"Replaced Value8\",\"Oct\",\"10\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value10\" = Table.ReplaceValue(#\"Replaced Value9\",\"Nov\",\"11\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Replaced Value11\" = Table.ReplaceValue(#\"Replaced Value10\",\"Dec\",\"12\",Replacer.ReplaceText,{\"No month\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value11\",{{\"No month\", Int64.Type}}),",
+                "    #\"Sorted Rows\" = Table.Sort(#\"Changed Type2\",{{\"Year\", Order.Ascending}, {\"No month\", Order.Ascending}, {\"Region\", Order.Ascending}})",
+                "in",
+                "    #\"Sorted Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_49120658-c1d4-4c42-8aa1-f23fc49b4ae7",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "bdb00231-1bcc-4292-9dda-f05be927010e",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3ac28bf7-18be-4186-bb2e-0a5bd4fe71ee",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "433840dc-cba5-4c94-9072-8e39bbf059bf",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "12308c5a-393e-4936-8405-48aa927c1561",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d772d0ec-99d9-4227-b877-ec93d087d150",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "ef5124ee-5c69-41d0-96e9-bd3464a8cdca",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "28a99944-b05c-459f-83c8-4fac45d19546",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "f8cb083a-56a8-4fcd-9cc1-0cdded67a554",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "17cc8bc2-d6ba-45e1-bd9d-bceff038fac7",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "73fedf7b-5064-4af1-a84a-152ce6a56d16",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "e2666951-65b0-4d9f-90e6-ccd966bf7aad",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "943c688c-5be6-4fa1-9816-156616c39812"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "cc027cac-0cb3-4621-9f6d-93f2102cb289",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_49120658-c1d4-4c42-8aa1-f23fc49b4ae7",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ph_latitude_longitude",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f33737c2-76e6-4c37-9a9a-f1acac1286e2",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Latitude",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "2c173f4a-3ea2-4268-b47d-340a8a6bc238",
+            "sourceColumn": "Latitude",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Longitude",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "aae88010-c70f-4b0a-af34-ae5bd0a2c647",
+            "sourceColumn": "Longitude",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "38ba37be-ecda-406d-8fae-a52027a885b7",
+        "partitions": [
+          {
+            "name": "ph_latitude_longitude",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"D:\\1Portfolio\\Github Repo Portfolio\\PowerBI_Ph_Dengue_Cases_2016-2020\\Data\\ph_latitude_longitude.csv\"),[Delimiter=\",\", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Region\", type text}, {\"Latitude\", type number}, {\"Longitude\", type number}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

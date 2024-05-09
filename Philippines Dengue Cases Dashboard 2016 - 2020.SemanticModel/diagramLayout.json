@@ -1,0 +1,48 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 42,
+            "y": 13.5
+          },
+          "nodeIndex": "ph_dengue_cases2016-2020",
+          "nodeLineageTag": "e0d23427-f1bc-4c8d-b902-da586a207ef4",
+          "size": {
+            "height": 252,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 316,
+            "y": 281.5
+          },
+          "nodeIndex": "ph_latitude_longitude",
+          "nodeLineageTag": "38ba37be-ecda-406d-8fae-a52027a885b7",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

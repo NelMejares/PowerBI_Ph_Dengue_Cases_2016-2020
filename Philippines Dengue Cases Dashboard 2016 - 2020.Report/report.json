@@ -1,0 +1,189 @@
+{
+  "config": "{\"version\":\"5.53\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleDefault\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"filterPaneHiddenInEditMode\":false},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod"
+    },
+    {
+      "boundSection": "ReportSection83ebeba728845f1276ca",
+      "config": "{}",
+      "name": "Pod1"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "AccessibleDefault",
+            "path": "BuiltInThemes/AccessibleDefault.json",
+            "type": 201
+          },
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"displayArea\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F3F3F3'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"outspace\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]},\"type\":1}",
+      "displayName": "Dengue Cases Dashboard",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"02bdd2c3dd70002a433f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":751.8541033434651,\"y\":6.808510638297872,\"z\":5000,\"width\":191.61094224924014,\"height\":60.30395136778116,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Year\"},\"Name\":\"ph_dengue_cases2016-2020.Year\",\"NativeReferenceName\":\"Year\"}]},\"syncGroup\":{\"groupName\":\"Year\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"slider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 60.30,
+          "width": 191.61,
+          "x": 751.85,
+          "y": 6.81,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"4feac804d62e61df0fd0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.45288753799392,\"y\":79.75683890577508,\"z\":0,\"width\":367.6595744680851,\"height\":144.92401215805472,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\",\"NativeReferenceName\":\"Total Dengue Cases\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\":{\"displayName\":\"Total Dengue Cases\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.92,
+          "width": 367.66,
+          "x": 19.45,
+          "y": 79.76,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"5e6a59d870d9e362710d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.45288753799392,\"y\":238.29787234042556,\"z\":2000,\"width\":747.9635258358663,\"height\":464.9240121580547,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Year\",\"active\":true},{\"queryRef\":\"ph_dengue_cases2016-2020.Short Month\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\"}],\"Y2\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Year\"},\"Name\":\"ph_dengue_cases2016-2020.Year\",\"NativeReferenceName\":\"Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Short Month\"},\"Name\":\"ph_dengue_cases2016-2020.Short Month\",\"NativeReferenceName\":\"Short Month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\",\"NativeReferenceName\":\"Dengue Cases\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\",\"NativeReferenceName\":\"Deaths\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Year\"}}}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\":{\"displayName\":\"Dengue Cases\"},\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\":{\"displayName\":\"Deaths\"}},\"queryOptions\":{\"keepProjectionOrder\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"matchLineColor\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"legendMarkerRendering\":{\"expr\":{\"Literal\":{\"Value\":\"'markerCircleDefault'\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}}}],\"y2Axis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"secShowAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"invertAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"lineStyles\":[{\"properties\":{\"strokeLineJoin\":{\"expr\":{\"Literal\":{\"Value\":\"'miter'\"}}},\"lineChartType\":{\"expr\":{\"Literal\":{\"Value\":\"'linear'\"}}},\"interpolationSmooth\":{\"expr\":{\"Literal\":{\"Value\":\"'cardinal'\"}}},\"interpolationSmoothParam\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}},\"areaShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\"}},{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"metadata\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\"}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dengue Cases and Deaths'\"}}}}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualTooltip\":[{\"properties\":{\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Canvas'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}},\"section\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection1a3399c3b8cb737587f5'\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter9dd513eb60a30e4ae133\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ph_dengue_cases2016-2020\"}},\"Property\":\"Year\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":true}]",
+          "height": 464.92,
+          "width": 747.96,
+          "x": 19.45,
+          "y": 238.30,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"68a903483098c75b8d7d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":778.5221674876848,\"y\":79.80295566502463,\"z\":3000,\"width\":484.1379310344828,\"height\":624.2364532019704,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Size\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\"}],\"Tooltips\":[{\"queryRef\":\"Min(ph_latitude_longitude.Region)\"}],\"Y\":[{\"queryRef\":\"ph_latitude_longitude.Latitude\"}],\"X\":[{\"queryRef\":\"ph_latitude_longitude.Longitude\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p1\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0},{\"Name\":\"p2\",\"Entity\":\"ph_latitude_longitude\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\",\"NativeReferenceName\":\"Dengue Cases\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p2\"}},\"Property\":\"Latitude\"},\"Name\":\"ph_latitude_longitude.Latitude\",\"NativeReferenceName\":\"Latitude\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p2\"}},\"Property\":\"Longitude\"},\"Name\":\"ph_latitude_longitude.Longitude\",\"NativeReferenceName\":\"Longitude\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p2\"}},\"Property\":\"Region\"}},\"Function\":3},\"Name\":\"Min(ph_latitude_longitude.Region)\",\"NativeReferenceName\":\"First Region\"}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\":{\"displayName\":\"Dengue Cases\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"FillRule\":{\"Input\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ph_dengue_cases2016-2020\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0}},\"FillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"Literal\":{\"Value\":\"'#41a4ff'\"}}},\"max\":{\"color\":{\"Literal\":{\"Value\":\"'#118DFF'\"}}},\"nullColoringStrategy\":{\"strategy\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}},{\"properties\":{\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dengue Cases by Region'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 624.24,
+          "width": 484.14,
+          "x": 778.52,
+          "y": 79.80,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"8a8799cb1f0d6c74ab36\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.09090909090909,\"y\":9.09090909090909,\"z\":4000,\"width\":581.8181818181818,\"height\":55.45454545454545,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Philippines Dengue Cases 2016-2020\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 55.45,
+          "width": 581.82,
+          "x": 19.09,
+          "y": 9.09,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"945d06f5631e5b6b25bf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":967.7811550151976,\"y\":11.671732522796352,\"z\":6001,\"width\":294.7112462006079,\"height\":49.6048632218845,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"pageNavigator\",\"drillFilterOtherVisuals\":true,\"objects\":{\"pages\":[{\"properties\":{\"showTooltipPages\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showHiddenPages\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 49.60,
+          "width": 294.71,
+          "x": 967.78,
+          "y": 11.67,
+          "z": 6001.00
+        },
+        {
+          "config": "{\"name\":\"d1e063c13e8391990c50\",\"layouts\":[{\"id\":0,\"position\":{\"x\":399.09090909090907,\"y\":80,\"z\":1000,\"width\":368.18181818181813,\"height\":144.54545454545453,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\",\"NativeReferenceName\":\"Total Deaths\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\":{\"displayName\":\"Total Deaths\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 144.55,
+          "width": 368.18,
+          "x": 399.09,
+          "y": 80.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"displayArea\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F3F3F3'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"outspace\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]},\"type\":1}",
+      "displayName": "Dengue Cases Per Region",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection83ebeba728845f1276ca",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"5fcb8e23e15fe8cffcd3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":751.8541033434651,\"y\":6.808510638297872,\"z\":5000,\"width\":191.61094224924014,\"height\":60.30395136778116,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Year\"},\"Name\":\"ph_dengue_cases2016-2020.Year\",\"NativeReferenceName\":\"Year\"}]},\"syncGroup\":{\"groupName\":\"Year\",\"fieldChanges\":true,\"filterChanges\":true},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"slider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"selection\":[{\"properties\":{\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 60.30,
+          "width": 191.61,
+          "x": 751.85,
+          "y": 6.81,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"9ae1405bd578321b37c8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.09090909090909,\"y\":9.09090909090909,\"z\":2000,\"width\":581.8181818181818,\"height\":55.45454545454545,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Philippines Dengue Cases 2016-2020\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontSize\":\"24pt\"}}]}]}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 55.45,
+          "width": 581.82,
+          "x": 19.09,
+          "y": 9.09,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b024af00c7b02bcac850\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.09090909090909,\"y\":391.8181818181818,\"z\":3000,\"width\":613.6363636363636,\"height\":311.8181818181818,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Short Month\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\"}],\"Series\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Region\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Short Month\"},\"Name\":\"ph_dengue_cases2016-2020.Short Month\",\"NativeReferenceName\":\"Month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\",\"NativeReferenceName\":\"Dengue Cases\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"ph_dengue_cases2016-2020.Region\",\"NativeReferenceName\":\"Region\"}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\":{\"displayName\":\"Dengue Cases\"},\"ph_dengue_cases2016-2020.Short Month\":{\"displayName\":\"Month\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dengue Cases by Month per Region'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ph_dengue_cases2016-2020\"}},\"Property\":\"Region\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 311.82,
+          "width": 613.64,
+          "x": 19.09,
+          "y": 391.82,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"bb71df237ea8b9240575\",\"layouts\":[{\"id\":0,\"position\":{\"x\":967.7811550151976,\"y\":11.671732522796352,\"z\":6000,\"width\":294.7112462006079,\"height\":49.6048632218845,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pageNavigator\",\"drillFilterOtherVisuals\":true,\"objects\":{\"pages\":[{\"properties\":{\"showTooltipPages\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showHiddenPages\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 49.60,
+          "width": 294.71,
+          "x": 967.78,
+          "y": 11.67,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"d6f53544436e6e6946c5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":649.090909090909,\"y\":78.18181818181817,\"z\":1000,\"width\":613.6363636363636,\"height\":305.45454545454544,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Region\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"ph_dengue_cases2016-2020.Region\",\"NativeReferenceName\":\"Region\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\",\"NativeReferenceName\":\"Deaths\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\":{\"displayName\":\"Deaths\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"invertAxis\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"logAxisScale\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Deaths by Region'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ph_dengue_cases2016-2020\"}},\"Property\":\"Region\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 305.45,
+          "width": 613.64,
+          "x": 649.09,
+          "y": 78.18,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fa4e55a034058fb70201\",\"layouts\":[{\"id\":0,\"position\":{\"x\":19.09090909090909,\"y\":78.18181818181817,\"z\":0,\"width\":613.6363636363636,\"height\":305.45454545454544,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Region\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"ph_dengue_cases2016-2020.Region\",\"NativeReferenceName\":\"Region\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\",\"NativeReferenceName\":\"Dengue Cases\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(ph_dengue_cases2016-2020.Dengue_Cases)\":{\"displayName\":\"Dengue Cases\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Dengue Cases by Region'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ph_dengue_cases2016-2020\"}},\"Property\":\"Region\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Cases\"}},\"Function\":0}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 305.45,
+          "width": 613.64,
+          "x": 19.09,
+          "y": 78.18,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ffc15fd17905f3e5a0f8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":649.090909090909,\"y\":391.8181818181818,\"z\":4000,\"width\":613.6363636363636,\"height\":311.8181818181818,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Short Month\",\"active\":true}],\"Series\":[{\"queryRef\":\"ph_dengue_cases2016-2020.Region\"}],\"Y\":[{\"queryRef\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Short Month\"},\"Name\":\"ph_dengue_cases2016-2020.Short Month\",\"NativeReferenceName\":\"Month\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"ph_dengue_cases2016-2020.Region\",\"NativeReferenceName\":\"Region\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0},\"Name\":\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\",\"NativeReferenceName\":\"Deaths\"}]},\"columnProperties\":{\"ph_dengue_cases2016-2020.Short Month\":{\"displayName\":\"Month\"},\"Sum(ph_dengue_cases2016-2020.Dengue_Deaths)\":{\"displayName\":\"Deaths\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0.4}}}}},\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.2}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Deaths by Month per Region'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ph_dengue_cases2016-2020\"}},\"Property\":\"Region\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Dengue_Deaths\"}},\"Function\":0}}}],\"Top\":5}}},\"Type\":2},{\"Name\":\"p\",\"Entity\":\"ph_dengue_cases2016-2020\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Region\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 311.82,
+          "width": 613.64,
+          "x": 649.09,
+          "y": 391.82,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "AccessibleDefault"
+}
