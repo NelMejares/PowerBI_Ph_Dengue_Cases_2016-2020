@@ -49,6 +49,6 @@ The Dengue Cases per Region dashboard aims to provide an overview of dengue case
 #### Data Filters
  – Allow users to filter data by year.
 
-<br></br>
+<br>
 # Dashboard Link
 ### [PH Dengue Cases 2016 - 2020](https://app.powerbi.com/view?r=eyJrIjoiNzkzMzVlZjMtY2IzMi00Y2E5LTlmZmEtNjMwOWE4OTFkMzM2IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9)
