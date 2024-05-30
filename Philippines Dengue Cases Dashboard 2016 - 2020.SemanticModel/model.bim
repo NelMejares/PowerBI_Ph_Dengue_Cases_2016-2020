@@ -1501,7 +1501,7 @@
               }
             ],
             "dataType": "int64",
-            "formatString": "0",
+            "formatString": "#,0",
             "lineageTag": "efdcb325-2ce2-4e60-85bb-d3340159532f",
             "sourceColumn": "Population",
             "summarizeBy": "none"
