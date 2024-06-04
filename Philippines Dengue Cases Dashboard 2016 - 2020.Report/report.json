@@ -84,7 +84,7 @@
   "sections": [
     {
       "config": "{\"relationships\":[{\"source\":\"65c905680120387dbc75\",\"target\":\"2144965a7bd7228e6c84\",\"type\":3},{\"source\":\"8eb4def00b1d695b10ac\",\"target\":\"2144965a7bd7228e6c84\",\"type\":3}],\"objects\":{\"displayArea\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Middle'\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F3F3F3'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"outspace\":[{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}}}]},\"type\":1}",
-      "displayName": "Dashboard",
+      "displayName": "Case Report",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
